@@ -5,6 +5,7 @@ export default function Counter(){
     <div>
       <p>Counter: {counter}</p>
       <button>Incrementar</button>
+      <button>Decrementar</button>
     </div>
   )
 }

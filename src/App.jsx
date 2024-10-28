@@ -5,7 +5,6 @@ export default function App() {
     <div>
       <h1>Projeto iniciado!</h1>
       <Counter/>
-      <button>Incrementar</button>
     </div>
   )
 }

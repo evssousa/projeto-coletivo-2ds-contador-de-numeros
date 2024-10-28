@@ -1,5 +1,10 @@
+import Counter from "./components/Counter"
+
 export default function App() {
   return (
-    <h1>Projeto iniciado!</h1>
+    <div>
+      <h1>Projeto iniciado!</h1>
+      <Counter/>
+    </div>
   )
 }

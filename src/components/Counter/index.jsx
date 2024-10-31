@@ -1,5 +1,4 @@
-import Increment from "../button/increment"
-import Decrement from "../button/decrement"
+import Button from './Button/index.jsx'
 
 export default function Counter(){
     let counter = 0

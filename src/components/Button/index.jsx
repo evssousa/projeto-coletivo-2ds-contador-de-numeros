@@ -1,7 +1,7 @@
 export default function Button() {
-    return 
+    return(
     <>
         <button>Decrementar</button>
         <button>Incrementar</button>
     </>
-}
+})

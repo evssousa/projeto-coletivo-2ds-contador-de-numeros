@@ -1,4 +1,4 @@
-import Button from './Button/index.jsx'
+import Button from '../Button'
 
 export default function Counter(){
     let counter = 0
@@ -14,8 +14,7 @@ export default function Counter(){
     return (     
       <div>
         <p>Counter: {counter}</p>
-        <Increment />
-        <Decrement />
+        <button/>
       </div>
     )
   }

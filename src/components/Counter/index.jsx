@@ -14,7 +14,7 @@ export default function Counter(){
     return (     
       <div>
         <p>Counter: {counter}</p>
-        <button/>
+        <Button/>
       </div>
     )
   }

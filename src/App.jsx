@@ -8,6 +8,7 @@ export default function App() {
       <Counter/>
       <Button nameIncrement={'Incrementar'}/>
       <Button nameDecrement={'Decrementar'}/>
+      <Button nameReset={'Resetar'}/>
     </div>
   )
 }

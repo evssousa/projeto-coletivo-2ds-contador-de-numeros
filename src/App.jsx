@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className="container">
       <h1>Projeto iniciado!</h1>
-      <Counter/>
+      <Counter step={}/>
       <Button nameIncrement={'Incrementar'}/>
       <Button nameDecrement={'Decrementar'}/>
       <Button nameReset={'Resetar'}/>

@@ -1,6 +1,6 @@
-export default function App() {
+export default function Title(props) {
     return (
        <div>
-         <h1>Valor do Contador</h1>
+         <h1>{props.children}</h1>
        </div>
     )}

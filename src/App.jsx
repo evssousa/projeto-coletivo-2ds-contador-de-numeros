@@ -5,7 +5,9 @@ import Title from './components/Title'
 export default function App() {
   return (
     <div className="container">
-      <Title/>
+     <Title>
+        <span>Valor do Contador</span>
+     </Title>
       <Counter/>
       <Button nameIncrement={'Incrementar'}/>
       <Button nameDecrement={'Decrementar'}/>

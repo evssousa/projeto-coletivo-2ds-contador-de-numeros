@@ -1,15 +1,15 @@
 import Button from '../Button'
 
-export default function Counter(props) {
-  let countInit = 0
+let countInit = 0
 
-  const count = () => {
-    if (countInit < 0) {
-      return countInit++
-    }
+const count = () => {
+  if (countInit < 0) {
+    return countInit++
   }
-    
-  return (     
+}
+
+export default function Counter() {
+  return (
     <div>
       <h1>Counter: {countInit}</h1>
       <Button>Incrementar</Button>

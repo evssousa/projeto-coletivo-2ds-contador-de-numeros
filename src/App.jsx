@@ -1,6 +1,6 @@
 import Counter from "./components/Counter"
 import Button from "./components/Button"
-import Title from './components/Title'
+import Title from "./components/Title"
 
 export default function App() {
   return (

@@ -4,7 +4,9 @@ import Button from "./components/Button"
 export default function App() {
   return (
     <div className="container">
-      <h1>Projeto iniciado!</h1>
+      <Title>
+        <span>Valor do Contador</span>
+      </Title>
       <Counter/>
       <Button nameIncrement={'Incrementar'}/>
       <Button nameDecrement={'Decrementar'}/>

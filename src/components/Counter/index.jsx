@@ -5,6 +5,7 @@ let counterValue = 0
 function increment() {
     counterValue += 1
     updateCounterDisplay()
+
 }
 
 function decrement() {
@@ -12,6 +13,7 @@ function decrement() {
         counterValue -= 1
     }
     updateCounterDisplay()
+    
 }
 
 function reset() {
@@ -23,8 +25,17 @@ function updateCounterDisplay() {
     const counterElement = document.querySelector('.counter-value')
     if (counterElement) {
         counterElement.textContent = `Valor: ${counterValue}`
-    }
+        //REUTILIZAR CÓDIGO
+        if (counterValue > 0) {
+            counterElement.className = `counter-value positive`
+        } else {
+            counterElement.className = `counter-value negative`
+        }
+    } 
     document.title = `Contador: ${counterValue}`
+   
+    
+
 }
 
 export default function Counter() {

@@ -69,3 +69,9 @@ button {
 .counter-value.positive {
     color: green;
 }
+
+/* BOTAO DE DOBRAR*/
+.double-button {
+    background-color: orange;
+    color: white;
+}

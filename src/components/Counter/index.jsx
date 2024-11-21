@@ -8,6 +8,12 @@ function increment() {
 
 }
 
+function double() {
+    counterValue *= 2
+    updateCounterDisplay()
+
+}
+
 function decrement() {
     if (counterValue > 0) {
         counterValue -= 1
@@ -34,7 +40,6 @@ function updateCounterDisplay() {
     } 
     document.title = `Contador: ${counterValue}`
    
-    
 
 }
 
@@ -46,6 +51,7 @@ export default function Counter() {
 
             <div className='buttons-container'>
                 <button className='increment-button' onClick={increment}>Incrementar</button>
+                <button className='double-button' onClick={double} >Dobrar</button>
                 <button className='decrement-button' onClick={decrement}>Decrementar</button>
                 <button className='reset-button' onClick={reset}>Resetar</button>
             </div>

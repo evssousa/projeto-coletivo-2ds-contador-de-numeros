@@ -75,3 +75,9 @@ button {
     background-color: orange;
     color: white;
 }
+
+/* BOTAO DE REVERSÃO*/
+.reverse-button {
+    background-color: blue;
+    color: white;
+}

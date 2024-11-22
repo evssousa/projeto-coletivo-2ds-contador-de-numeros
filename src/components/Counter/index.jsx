@@ -38,12 +38,24 @@ function reverse() {
 
 function updateCounterDisplay() {
     const counterElement = document.querySelector('.counter-value')
+    const counterTitle = document.querySelector('.counter-title')
     if (counterElement) {
         counterElement.textContent = `Valor: ${counterValue}`
         if (counterValue > 0) {
             counterElement.className = 'counter-value positive'
         } else {
             counterElement.className = 'counter-value negative'
+        }
+
+
+        //reutilizar caso necessário
+        if (counterValue === 0) {
+             counterTitle.className = 'counter-title neutral'
+        } else if (counterValue > 0) {
+             counterTitle.className = 'counter-title positive'
+        }
+        else {
+            counterTitle.className = 'counter-title negative'
         }
     } 
     document.title = `Contador: ${counterValue}`
@@ -52,7 +64,7 @@ function updateCounterDisplay() {
 export default function Counter() {
     return (
         <div className='counter-container'>
-            <h1>Contador</h1>
+            <h1 className='counter-title'>Contador</h1>
             <p className='counter-value'>Valor: {counterValue}</p>
 
             <div className='buttons-container'>

@@ -92,7 +92,9 @@ button {
     font-size: 2.5rem;
 }
 
-.mult-button{
+/* BOTÃO DE MULTIPLICAR */
+
+.mult-button {
     background-color: rgb(134, 98, 233);
     color: white;
 }

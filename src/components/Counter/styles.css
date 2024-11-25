@@ -98,3 +98,8 @@ button {
     background-color: rgb(134, 98, 233);
     color: white;
 }
+
+.divide-button {
+    background-color: rgb(41, 209, 209);
+    color: white;
+}

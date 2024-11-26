@@ -21,6 +21,12 @@ function mult() {
     updateCounterDisplay()
 }
 
+function divide() {
+    previousValue = counterValue;
+    counterValue /= 10
+    updateCounterDisplay()
+}
+
 function decrement() {
     if (counterValue > 0) {
         previousValue = counterValue;
@@ -75,6 +81,7 @@ export default function Counter() {
                 <button className='increment-button' onClick={increment}>Incrementar</button>
                 <button className='double-button' onClick={double}>Dobrar</button>
                 <button className='mult-button' onClick={mult}>Multiplicar x10</button>
+                <button className='divide-button' onClick={divide}>Dividir ÷10</button>
                 <button className='reverse-button' onClick={reverse}>Reversão</button>
                 <button className='decrement-button' onClick={decrement}>Decrementar</button>
                 <button className='reset-button' onClick={reset}>Resetar</button>

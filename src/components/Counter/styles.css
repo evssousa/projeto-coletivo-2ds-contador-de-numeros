@@ -103,3 +103,7 @@ button {
     background-color: rgb(41, 209, 209);
     color: white;
 }
+.fixoincrement-button{
+    background-color: crimson;
+    color: #ffffff;
+}

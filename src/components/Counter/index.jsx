@@ -8,6 +8,11 @@ function increment() {
     counterValue += 1
     updateCounterDisplay()
 }
+function addincrement() {
+    previousValue = counterValue;
+    counterValue += 5
+    updateCounterDisplay()
+}
 
 function double() {
     previousValue = counterValue; 
@@ -79,6 +84,7 @@ export default function Counter() {
 
             <div className='buttons-container'>
                 <button className='increment-button' onClick={increment}>Incrementar</button>
+                <button className='fixoincrement-button' onClick={addincrement}>Adicionar +5</button>
                 <button className='double-button' onClick={double}>Dobrar</button>
                 <button className='mult-button' onClick={mult}>Multiplicar x10</button>
                 <button className='divide-button' onClick={divide}>Dividir ÷10</button>

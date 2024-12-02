@@ -92,18 +92,23 @@ button {
     font-size: 2.5rem;
 }
 
-/* BOTÃO DE MULTIPLICAR */
-
-.mult-button {
+.mult-button{
     background-color: rgb(134, 98, 233);
     color: white;
 }
-
-.divide-button {
-    background-color: rgb(41, 209, 209);
+.sub-button{
+    background-color: rgb(5, 74, 38);
     color: white;
 }
 .fixoincrement-button{
-    background-color: crimson;
-    color: #ffffff;
+    background-color: rgb(104, 29, 65);
+    color: white;
+}
+.divide-button{
+    background-color: rgb(53, 55, 130);
+    color: white;
+}
+.reverse-button{
+    background-color: rgb(160, 167, 106);
+    color: white;
 }

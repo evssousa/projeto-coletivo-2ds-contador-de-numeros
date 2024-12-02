@@ -53,6 +53,12 @@ function reverse() {
     }
 }
 
+function sub(){
+    previousValue = counterValue;
+    counterValue -=3
+    updateCounterDisplay()
+}
+
 function updateCounterDisplay() {
     const counterElement = document.querySelector('.counter-value')
     const counterTitle = document.querySelector('.counter-title')
@@ -87,6 +93,7 @@ export default function Counter() {
                 <button className='fixoincrement-button' onClick={addincrement}>Adicionar +5</button>
                 <button className='double-button' onClick={double}>Dobrar</button>
                 <button className='mult-button' onClick={mult}>Multiplicar x10</button>
+                <button className="sub-button"onClick={sub}>Subtrair</button>
                 <button className='divide-button' onClick={divide}>Dividir ÷10</button>
                 <button className='reverse-button' onClick={reverse}>Reversão</button>
                 <button className='decrement-button' onClick={decrement}>Decrementar</button>

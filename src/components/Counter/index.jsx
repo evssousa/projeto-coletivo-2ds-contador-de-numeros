@@ -4,10 +4,15 @@ let counterValue = 0
 let previousValue = null  
 
 function increment() {
-    previousValue = counterValue;  
-    counterValue += 1
-    updateCounterDisplay()
+    if (counterValue < 1000) {
+        previousValue = counterValue;  
+        counterValue += 1
+        updateCounterDisplay()
+    } else {
+        alert("Você atingiu o limite de 1000!");
+    }
 }
+
 function addincrement() {
     previousValue = counterValue;
     counterValue += 5
@@ -36,8 +41,8 @@ function decrement() {
     if (counterValue > 0) {
         previousValue = counterValue;
         counterValue -= 1
+        updateCounterDisplay()
     }
-    updateCounterDisplay()
 }
 
 function reset() {
@@ -54,9 +59,11 @@ function reverse() {
 }
 
 function sub(){
-    previousValue = counterValue;
-    counterValue -=3
-    updateCounterDisplay()
+    if (counterValue > 0) {
+        previousValue = counterValue;
+        counterValue -= 3
+        updateCounterDisplay()
+    }
 }
 
 function updateCounterDisplay() {
@@ -78,8 +85,13 @@ function updateCounterDisplay() {
         else {
             counterTitle.className = 'counter-title negative'
         }
-    } 
+    }
     document.title = `Contador: ${counterValue}`
+
+    const incrementButton = document.querySelector('.increment-button');
+    if (incrementButton) {
+        incrementButton.disabled = counterValue >= 1000;
+    }
 }
 
 export default function Counter() {
@@ -93,7 +105,7 @@ export default function Counter() {
                 <button className='fixoincrement-button' onClick={addincrement}>Adicionar +5</button>
                 <button className='double-button' onClick={double}>Dobrar</button>
                 <button className='mult-button' onClick={mult}>Multiplicar x10</button>
-                <button className="sub-button"onClick={sub}>Subtrair</button>
+                <button className="sub-button" onClick={sub}>Subtrair</button>
                 <button className='divide-button' onClick={divide}>Dividir ÷10</button>
                 <button className='reverse-button' onClick={reverse}>Reversão</button>
                 <button className='decrement-button' onClick={decrement}>Decrementar</button>

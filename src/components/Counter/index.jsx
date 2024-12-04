@@ -4,34 +4,26 @@ let counterValue = 0
 let previousValue = null  
 
 function increment() {
-    if (counterValue < 1000) {
-        previousValue = counterValue;  
-        counterValue += 1
-        updateCounterDisplay()
-    }
+    previousValue = counterValue;  
+    counterValue += 1
+    updateCounterDisplay()
 }
 function addincrement() {
-    if (counterValue < 1000) {
-        previousValue = counterValue;
-        counterValue += 5
-        updateCounterDisplay()
-    }
+    previousValue = counterValue;
+    counterValue += 5
+    updateCounterDisplay()
 }
 
 function double() {
-    if (counterValue * 2 <= 1000) {
-        previousValue = counterValue; 
-        counterValue *= 2
-        updateCounterDisplay()
-    }
+    previousValue = counterValue; 
+    counterValue *= 2
+    updateCounterDisplay()
 }
 
 function mult() {
-    if (counterValue * 10 <= 1000) {
-        previousValue = counterValue;
-        counterValue *= 10
-        updateCounterDisplay()
-    }
+    previousValue = counterValue;
+    counterValue *= 10
+    updateCounterDisplay()
 }
 
 function divide() {
@@ -44,8 +36,8 @@ function decrement() {
     if (counterValue > 0) {
         previousValue = counterValue;
         counterValue -= 1
-        updateCounterDisplay()
     }
+    updateCounterDisplay()
 }
 
 function reset() {
@@ -60,27 +52,11 @@ function reverse() {
         updateCounterDisplay()
     }
 }
-import './styles.css'
-
-let counterValue = 0
-let previousValue = null  
-
-function increment() {
-    previousValue = counterValue;  
-    counterValue += 1
-    updateCounterDisplay()
-}
-…            </div>
-        </div>
-    )
-}
 
 function sub(){
-    if (counterValue > 0) {
-        previousValue = counterValue;
-        counterValue -= 3
-        updateCounterDisplay()
-    }
+    previousValue = counterValue;
+    counterValue -=3
+    updateCounterDisplay()
 }
 
 function updateCounterDisplay() {
@@ -102,18 +78,8 @@ function updateCounterDisplay() {
         else {
             counterTitle.className = 'counter-title negative'
         }
-    }
+    } 
     document.title = `Contador: ${counterValue}`
-    
-    // Desabilitar botões se o contador atingir o limite
-    const buttons = document.querySelectorAll('button')
-    buttons.forEach(button => {
-        if (counterValue >= 1000 && (button.className === 'increment-button' || button.className === 'fixoincrement-button' || button.className === 'double-button' || button.className === 'mult-button')) {
-            button.disabled = true
-        } else {
-            button.disabled = false
-        }
-    })
 }
 
 export default function Counter() {
@@ -127,7 +93,7 @@ export default function Counter() {
                 <button className='fixoincrement-button' onClick={addincrement}>Adicionar +5</button>
                 <button className='double-button' onClick={double}>Dobrar</button>
                 <button className='mult-button' onClick={mult}>Multiplicar x10</button>
-                <button className="sub-button" onClick={sub}>Subtrair</button>
+                <button className="sub-button"onClick={sub}>Subtrair</button>
                 <button className='divide-button' onClick={divide}>Dividir ÷10</button>
                 <button className='reverse-button' onClick={reverse}>Reversão</button>
                 <button className='decrement-button' onClick={decrement}>Decrementar</button>
